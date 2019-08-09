@@ -6,8 +6,12 @@ class SearchBar extends Component {
     super(props);
   }
 
+  handleUpdate = (event) => {
+    this.props.apiSearch(event.target.value);
+  }
+
   render() {
-    return <input type="text" className="form-control form-search"/>
+    return <input type="text" className="form-control form-search" onChange={this.handleUpdate} />
   }
 }
 
